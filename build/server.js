@@ -1,20 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const app = (0, express_1.default)();
+const app_1 = require("./app");
 const port = 8099;
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Cache-Control", "no-store");
-    next();
-});
-app.get("/", (req, res) => {
-    res.status(200).send("Carregou com sucesso!");
-    return;
-});
-app.listen(port, '0.0.0.0', () => {
+app_1.app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor rodando na porta ${port}. http://localhost:${port}/`);
 });
+//nao sei mais

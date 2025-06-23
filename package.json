@@ -2,11 +2,11 @@
   "name": "teste-cicd",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "nodemon --watch src/ --ext ts --exec \"ts-node ./src/server.ts\"",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "prod": "node build/server.js"
   },
   "keywords": [],
   "author": "",
