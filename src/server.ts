@@ -6,6 +6,7 @@ const port = 8099;
 
 app.use((req:Request, res:Response, next:NextFunction)=> {
     res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Cache-Control", "no-store");
     next();
 })
 

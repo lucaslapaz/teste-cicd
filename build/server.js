@@ -8,6 +8,7 @@ const app = (0, express_1.default)();
 const port = 8099;
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Cache-Control", "no-store");
     next();
 });
 app.get("/", (req, res) => {
