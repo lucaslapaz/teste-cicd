@@ -48,7 +48,7 @@ jobs:
             cd /home/portfolio
             
             # Parar o processo anterior (se estiver rodando na porta 3000, por exemplo)
-            PID=$(lsof -t -i:8099) && if [ -n "$PID" ]; then kill -9 $PID; fi
+            PID=$(lsof -t -i:8088) && if [ -n "$PID" ]; then kill -9 $PID; fi
 
             # Instalar dependências para produção
             npm install --production
