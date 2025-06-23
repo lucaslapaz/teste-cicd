@@ -29,7 +29,7 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
-          password: 1903Portfolio$$
+          password: ${{ secrets.VPS_PASSWD }}
           port: 22
           source: "."
           target: "/home/portfolio"
