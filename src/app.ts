@@ -16,5 +16,5 @@ app.get("/", (req:Request, res:Response) => {
 })
 
 export const f1 = function(a: number, b:number){
-    return a + b;
+    return a * b;
 }

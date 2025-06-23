@@ -6,3 +6,4 @@ app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor rodando na porta ${port}. http://localhost:${port}/`);
 });
 
+//nao sei mais
