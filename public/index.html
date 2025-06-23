@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site de Teste</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 0.9em;
+        }
+        button {
+            background-color: #00c853;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #00b342;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site de Teste</h1>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <main>
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Este é um site simples criado em um único arquivo HTML. Ele demonstra o uso de HTML, CSS e JavaScript básicos para criar uma página visualmente agradável e funcional.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <ul>
+                <li>Desenvolvimento Web</li>
+                <li>Design Responsivo</li>
+                <li>Consultoria Técnica</li>
+            </ul>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Se você quiser falar comigo, clique no botão abaixo:</p>
+            <button onclick="mostrarMensagem()">Clique aqui</button>
+            <p id="mensagem" style="margin-top: 10px; font-weight: bold;"></p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Meu Site de Teste. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function mostrarMensagem() {
+            const msg = document.getElementById('mensagem');
+            msg.textContent = 'Obrigado por entrar em contato! (Mensagem simulada)';
+        }
+    </script>
+</body>
+</html>

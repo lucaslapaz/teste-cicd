@@ -1,8 +1,11 @@
 import express, { NextFunction, Request, Response } from "express";
+import path from "path";
 
 export const app = express();
 
 app.use(express.json());
+
+app.use(express.static(path.join(__dirname, "../public")))
 
 app.use((req:Request, res:Response, next:NextFunction)=> {
     res.setHeader("Access-Control-Allow-Origin", "*");
