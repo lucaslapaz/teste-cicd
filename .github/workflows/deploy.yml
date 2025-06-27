@@ -29,10 +29,11 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
-          password: ${{ secrets.VPS_PASSWD }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          # password: ${{ secrets.VPS_PASSWD }}
           port: 22
           source: "."
-          target: "/home/portfolio"
+          target: "~/minha-aplicacao/public"
           rm: false
           strip_components: 0
           exclude: "node_modules"
@@ -42,13 +43,14 @@ jobs:
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
-          password: ${{ secrets.VPS_PASSWD }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          # password: ${{ secrets.VPS_PASSWD }}
           port: 22
           script: |
-            cd /home/portfolio
+            cd ~/minha-aplicacao/public
             
             # Parar o processo anterior (se estiver rodando na porta 3000, por exemplo)
-            PID=$(lsof -t -i:8088) && if [ -n "$PID" ]; then kill -9 $PID; fi
+            PID=$(lsof -t -i:3000) && if [ -n "$PID" ]; then kill -9 $PID; fi
 
             # Instalar dependências para produção
             npm install --production
